@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/NavBar";
 import Header from "./components/Header";
 import "./App.css"; // adicionaremos o CSS aqui
+import Category from "./pages/Category/Category";
 
 const PrivateRoute = ({ children }) => {
   const { user } = useAuth();
@@ -41,6 +42,7 @@ function App() {
                 <Route path="/incidents" element={<IncidentList />} />
                 <Route path="/incidents/:id" element={<IncidentForm />} />
                 <Route path="/new" element={<IncidentForm />} />
+                <Route path="/categories" element={<Category />} />
               </Routes>
             </div>
           </div>

@@ -26,6 +26,9 @@ const Navbar = () => {
                         <Nav.Link as={Link} to="/new" className="text-light">
                         Reportar
                         </Nav.Link>
+                        <Nav.Link as={Link} to="/categories" className="text-light">
+                        Categorias
+                        </Nav.Link>
                     </Nav>
                 </BNav.Collapse>
             </Container>
