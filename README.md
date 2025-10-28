@@ -10,9 +10,8 @@ A aplicação permite o cadastro e o controle de **categorias** e **incidentes**
 - **React.js** — Biblioteca principal para construção da interface.  
 - **React Router DOM** — Gerenciamento de rotas e navegação entre páginas.  
 - **Bootstrap 5** — Estilização responsiva e moderna.  
-- **Firebase Firestore** — Banco de dados NoSQL para armazenamento em nuvem.  
-- **Firebase Hosting (opcional)** — Para publicação da aplicação.  
-
+- **Firebase Firestore** — Banco de dados NoSQL para armazenamento em nuvem.
+  
 ---
 
 ## ⚙️ Funcionalidades
@@ -54,7 +53,7 @@ npm install
 ```
 3. **Crie as variáveis de ambiente para o Firebase**
 
-> Na raiz do seu projeto, no mesmo nível do package.json, crie um arquivo .env com o seguinte conteúdo:
+> Na raiz do seu projeto, no mesmo nível do package.json, crie um arquivo .env com o seguinte conteúdo. As informações para atribuição a estas variáveis você pode consultar nas configurações do SDK do seu app, que está presente no projeto criado no Firebase.
 
 ```
 REACT_APP_API_KEY=
