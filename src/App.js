@@ -6,9 +6,9 @@ import IncidentForm from "./components/IncidentForm";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/NavBar";
-import Header from "./components/Header";
 import "./App.css"; // adicionaremos o CSS aqui
 import Category from "./pages/Category/Category";
+import Header from "./components/Header/Header";
 
 const PrivateRoute = ({ children }) => {
   const { user } = useAuth();
@@ -27,7 +27,7 @@ function App() {
           <div className="main-content flex-grow-1">
             <Header />
 
-            <div className="content p-4">
+            <div className="content">
               <Routes>
                 {/* <Route path="/login" element={<Login />} />
                 <Route path="/" element={<Navigate to="/dashboard" />} />

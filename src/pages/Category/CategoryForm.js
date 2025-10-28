@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { createCategory, updateCategory } from "../../services/categoryService";
 
-const CategoryForm = ({ selectedCategory, onSave }) => {
+const CategoryForm = ({ selectedCategory, setSelectedCategory, onSave }) => {
     const [name, setName] = useState("");
 
     useEffect(() => {
@@ -25,6 +25,11 @@ const CategoryForm = ({ selectedCategory, onSave }) => {
         setName("");
     };
 
+    const handleCancel = () => {
+        setName("")
+        setSelectedCategory(null)
+    }
+
     return (
         <div className="mb-4">
             <h4>{selectedCategory ? "Editar Categoria" : "Nova Categoria"}</h4>
@@ -41,6 +46,9 @@ const CategoryForm = ({ selectedCategory, onSave }) => {
                 </Form.Group>
                 <Button type="submit" variant="primary">
                     {selectedCategory ? "Atualizar" : "Adicionar"}
+                </Button>
+                <Button variant="danger" className="m-2" onClick={() => handleCancel()}> 
+                    Cancelar
                 </Button>
             </Form>
         </div>

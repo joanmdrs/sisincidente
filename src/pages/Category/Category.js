@@ -14,23 +14,19 @@ const Category = () => {
     };
 
     return (
-        <Container className="mt-4">
-            <Card>
-                <Card.Body>
-                    <Row>
-                        <Col md={4}>
-                            <CategoryForm
-                                selectedCategory={selectedCategory}
-                                onSave={handleSave}
-                            />
-                        </Col>
-                        <Col md={8}>
-                            <CategoryList
-                                key={refresh}
-                                onEdit={(cat) => setSelectedCategory(cat)}
-                            />
-                        </Col>
-                    </Row>
+        <Container className="m-0 p-0">
+            <Card className="border-0">
+                <Card.Body>                 
+                    <CategoryForm
+                        selectedCategory={selectedCategory}
+                        setSelectedCategory={setSelectedCategory}
+                        onSave={handleSave}
+                    />
+                
+                    <CategoryList
+                        key={refresh}
+                        onEdit={(cat) => setSelectedCategory(cat)}
+                    />
                 </Card.Body>
             </Card>
         </Container>
