@@ -1,23 +1,20 @@
 // src/components/CategoryList.js
 import React, { useEffect, useState } from "react";
-import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
-import { db } from "../../firebaseConfig";
 import { Button, Table } from "react-bootstrap";
+import { deleteCategory, getCategories } from "../../services/categoryService";
 
 const CategoryList = ({ onEdit }) => {
     const [categories, setCategories] = useState([]);
 
     const fetchCategories = async () => {
-        const querySnapshot = await getDocs(collection(db, "categories"));
-        const items = querySnapshot.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-        }));
-        setCategories(items);
+        const response = await getCategories()
+        console.log(response)
+        setCategories(response);
     };
 
     const handleDelete = async (id) => {
-        await deleteDoc(doc(db, "categories", id));
+        const res = await deleteCategory(id)
+
         fetchCategories();
     };
 

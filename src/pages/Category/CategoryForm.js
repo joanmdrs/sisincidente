@@ -1,8 +1,7 @@
 // src/components/CategoryForm.js
 import React, { useState, useEffect } from "react";
-import { addDoc, updateDoc, doc, collection } from "firebase/firestore";
-import { db } from "../../firebaseConfig"; 
 import { Button, Form } from "react-bootstrap";
+import { createCategory, updateCategory } from "../../services/categoryService";
 
 const CategoryForm = ({ selectedCategory, onSave }) => {
     const [name, setName] = useState("");
@@ -18,10 +17,9 @@ const CategoryForm = ({ selectedCategory, onSave }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (selectedCategory) {
-            const ref = doc(db, "categories", selectedCategory.id);
-            await updateDoc(ref, { name });
+            await updateCategory(selectedCategory.id, { name });
         } else {
-            await addDoc(collection(db, "categories"), { name });
+            await createCategory({name})
         }
         onSave();
         setName("");
