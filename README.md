@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# 🧭 SisIncidentes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O **SisIncidentes** é um sistema web desenvolvido para registrar, visualizar e gerenciar incidentes de forma simples e organizada.  
+A aplicação permite o cadastro e o controle de **categorias** e **incidentes**, com suporte completo às operações **CRUD** (Criar, Ler, Atualizar e Deletar).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologias Utilizadas
 
-### `npm start`
+- **React.js** — Biblioteca principal para construção da interface.  
+- **React Router DOM** — Gerenciamento de rotas e navegação entre páginas.  
+- **Bootstrap 5** — Estilização responsiva e moderna.  
+- **Firebase Firestore** — Banco de dados NoSQL para armazenamento em nuvem.  
+- **Firebase Hosting (opcional)** — Para publicação da aplicação.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⚙️ Funcionalidades
 
-### `npm test`
+- 📋 Cadastro, listagem, edição e exclusão de **incidentes**  
+- 🗂️ CRUD completo de **categorias**  
+- 🔍 Filtro de incidentes por categoria ou nome  
+- 🔐 Autenticação (opcional, se habilitada no Firebase Auth)  
+- 💾 Persistência de dados via **Firebase Firestore**  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧩 Configuração e Execução do Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔹 Pré-requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Antes de executar o projeto, você precisa ter instalado:
 
-### `npm run eject`
+- [Node.js (>= 18.x)](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+- Uma conta no [Firebase Console](https://console.firebase.google.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔹 Passos para executar localmente
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone este repositório**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/joanmdrs/sisincidentes.git
+cd sisincidentes
+```
 
-## Learn More
+2. **Instale as dependências**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm install
+```
+3. **Crie as variáveis de ambiente para o Firebase**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Na raiz do seu projeto, no mesmo nível do package.json, crie um arquivo .env com o seguinte conteúdo:
 
-### Code Splitting
+```
+REACT_APP_API_KEY=
+REACT_APP_AUTH_DOMAIN=
+REACT_APP_PROJECT_ID=
+REACT_APP_STORAGE_BUCKET=
+REACT_APP_MESSAGING_SENDER_ID=
+REACT_APP_APP_ID=
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Inicie o servidor local**
 
-### Analyzing the Bundle Size
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
