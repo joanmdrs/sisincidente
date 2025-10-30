@@ -1,4 +1,4 @@
-export const initialCategoria = {
+export const initialCategoriaModel = {
   nome: '',
   descricao: '',
   tipo: 'Incidente',

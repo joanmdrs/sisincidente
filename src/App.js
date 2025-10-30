@@ -7,8 +7,8 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/NavBar";
 import "./App.css"; // adicionaremos o CSS aqui
-import Category from "./pages/Category/Category";
 import Header from "./components/Header/Header";
+import Categoria from "./pages/Categoria/Categoria";
 
 const PrivateRoute = ({ children }) => {
   const { user } = useAuth();
@@ -42,7 +42,7 @@ function App() {
                 <Route path="/incidents" element={<IncidentList />} />
                 <Route path="/incidents/:id" element={<IncidentForm />} />
                 <Route path="/new" element={<IncidentForm />} />
-                <Route path="/categories" element={<Category />} />
+                <Route path="/categorias" element={<Categoria />} />
               </Routes>
             </div>
           </div>

@@ -1,10 +1,10 @@
 // src/components/Category.js
 import React, { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import CategoryList from "./CategoryList";
-import CategoryForm from "./CategoryForm";
+import CategoriaList from "./CategoriaList";
+import CategoriaForm from "./CategoriaForm";
 
-const Category = () => {
+const Categoria = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [refresh, setRefresh] = useState(false);
 
@@ -17,13 +17,13 @@ const Category = () => {
         <Container className="m-0 p-0">
             <Card className="border-0">
                 <Card.Body>                 
-                    <CategoryForm
+                    <CategoriaForm
                         selectedCategory={selectedCategory}
                         setSelectedCategory={setSelectedCategory}
                         onSave={handleSave}
                     />
                 
-                    <CategoryList
+                    <CategoriaList
                         key={refresh}
                         onEdit={(cat) => setSelectedCategory(cat)}
                     />
@@ -33,4 +33,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Categoria;
